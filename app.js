@@ -91,13 +91,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  console.log("Middleware 2 running");
-  next();
-});
+
 
 app.use((req, res, next) => {
-  console.log("Middleware 3 running");
+  console.log("Middleware 2 running");
   next();
 });
 
@@ -109,3 +106,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port :http://localhost:${PORT}`);
 });
+
